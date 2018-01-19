@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\Publicacion</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ean.edu.desarrollo.modelo.logica.dll">
+      <publishTime>06/10/2016 19:18:38</publishTime>
+    </File>
+    <File Include="bin/ean.edu.desarrollo.modelo.pocso.dll">
+      <publishTime>06/10/2016 19:18:37</publishTime>
+    </File>
+    <File Include="bin/ean.edu.desarrollo.persistencia.adonet.dll">
+      <publishTime>06/10/2016 19:18:38</publishTime>
+    </File>
+    <File Include="bin/ean.edu.desarrollo.web.dll">
+      <publishTime>06/10/2016 20:13:45</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/04/2016 19:30:02</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>06/10/2016 20:13:46</publishTime>
+    </File>
+    <File Include="Vista/Default.aspx">
+      <publishTime>06/05/2016 22:12:54</publishTime>
+    </File>
+    <File Include="Vista/detalleFactura.aspx">
+      <publishTime>06/05/2016 23:46:32</publishTime>
+    </File>
+    <File Include="Vista/FacturaDeVenta.aspx">
+      <publishTime>06/08/2016 23:34:24</publishTime>
+    </File>
+    <File Include="Vista/Master.Master">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/RegistrarCliente.aspx">
+      <publishTime>06/08/2016 23:06:32</publishTime>
+    </File>
+    <File Include="Vista/RegistrarEstrato.aspx">
+      <publishTime>06/08/2016 23:31:58</publishTime>
+    </File>
+    <File Include="Vista/Resources/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs.org/css/alertify.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs.org/js/alertify.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/alertify.js">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/alertify.min.js">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/alertify.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/alertify.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/alertify.rtl.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/alertify.rtl.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/bootstrap.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/bootstrap.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/bootstrap.rtl.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/bootstrap.rtl.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/default.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/default.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/default.rtl.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/default.rtl.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/semantic.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/semantic.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/semantic.rtl.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/alertifyjs/css/themes/semantic.rtl.min.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/css/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/css/index.css">
+      <publishTime>06/08/2016 23:08:14</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/blank.gif">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/fancybox_loading%402x.gif">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/fancybox_loading.gif">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/fancybox_overlay.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/fancybox_sprite%402x.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/fancybox_sprite.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/helpers/fancybox_buttons.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/helpers/jquery.fancybox-buttons.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/helpers/jquery.fancybox-buttons.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/helpers/jquery.fancybox-media.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/helpers/jquery.fancybox-thumbs.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/helpers/jquery.fancybox-thumbs.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/jquery.fancybox.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/jquery.fancybox.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/fancybox/jquery.fancybox.pack.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/android-icon-144x144.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/android-icon-192x192.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/android-icon-36x36.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/android-icon-48x48.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/android-icon-72x72.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/android-icon-96x96.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-114x114.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-120x120.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-144x144.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-152x152.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-180x180.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-57x57.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-60x60.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-72x72.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-76x76.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon-precomposed.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/apple-icon.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/browserconfig.xml">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/favicon-16x16.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/favicon-32x32.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/favicon-96x96.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/favicon.ico">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/manifest.json">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/ms-icon-144x144.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/ms-icon-150x150.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/ms-icon-310x310.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/favicons.ico/ms-icon-70x70.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/images/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/images/bg.jpg">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/images/logo.png">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/js/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/js/index.js">
+      <publishTime>06/10/2016 19:54:06</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/bootstrap/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/bootstrap/css/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/bootstrap/css/bootstrap.min.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/bootstrap/js/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/bootstrap/js/bootstrap.min.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/css/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/css/font-awesome.min.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/fontawesome-webfont.woff2">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/jquery/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/jquery/jquery-2.2.3.min.js">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/normalize/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/normalize/css/.DS_Store">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/Resources/vendors/normalize/css/normalize.css">
+      <publishTime>06/04/2016 19:31:10</publishTime>
+    </File>
+    <File Include="Vista/verClientesRegistrados.aspx">
+      <publishTime>06/05/2016 23:55:48</publishTime>
+    </File>
+    <File Include="Vista/verFacturasRegistradas.aspx">
+      <publishTime>06/09/2016 15:09:44</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>06/10/2016 19:18:43</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

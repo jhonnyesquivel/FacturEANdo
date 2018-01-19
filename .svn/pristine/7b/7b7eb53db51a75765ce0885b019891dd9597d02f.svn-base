@@ -1,0 +1,41 @@
+﻿<%@ Page Title="Agregar Estrato" Language="C#" MasterPageFile="Master.master" AutoEventWireup="true" CodeBehind="RegistrarEstrato.aspx.cs" Inherits="ean.edu.desarrollo.web.controladores.RegistrarEstrato" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHeader" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    <div class="tabla_registrocliente">
+        <div class="row titulo_tabla_registrocliente">
+            <h3>Agregar nuevo estrato:</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <p>
+                    Estrato:
+                </p>
+            </div>
+            <div class="col-md-10">
+                <asp:TextBox ID="txt_estrato" runat="server" MaxLength="1" onkeypress="return ValidarNumericos(this, event);"></asp:TextBox>
+            </div>
+            <div class="col-md-2">
+                <p>
+                    Valor Base (Para el Cargo Variable):
+                </p>
+            </div>
+            <div class="col-md-10">
+                <asp:TextBox ID="txtValorEstrato" runat="server" MaxLength="18" onkeypress="return ValidarNumericos(this, event);"></asp:TextBox>
+            </div>
+            <div class="col-md-2">
+                <p>
+                    Valor Cargo Fijo:
+                </p>
+            </div>
+            <div class="col-md-10">
+                <asp:TextBox ID="txtCargoFijo" runat="server" MaxLength="18" onkeypress="return ValidarNumericos(this, event);"></asp:TextBox>
+            </div>
+        </div>
+        <div class="espacio_boton_envio">
+            <asp:Button runat="server" ID="btn_guardarEstrato" OnClick="btn_guardarEstrato_Click" Text="Guardar" CssClass="btn_registrar" />
+        </div>
+    </div>
+    <asp:Literal ID="litNotificaciones" runat="server"></asp:Literal>
+</asp:Content>

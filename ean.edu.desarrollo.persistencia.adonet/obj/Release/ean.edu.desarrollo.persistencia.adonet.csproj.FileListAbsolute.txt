@@ -1,0 +1,7 @@
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\bin\Release\ean.edu.desarrollo.persistencia.adonet.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\bin\Release\ean.edu.desarrollo.persistencia.adonet.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\bin\Release\ean.edu.desarrollo.modelo.pocso.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\bin\Release\ean.edu.desarrollo.modelo.pocso.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\obj\Release\ean.edu.desarrollo.persistencia.adonet.csprojResolveAssemblyReference.cache
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\obj\Release\ean.edu.desarrollo.persistencia.adonet.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.persistencia.adonet\obj\Release\ean.edu.desarrollo.persistencia.adonet.pdb

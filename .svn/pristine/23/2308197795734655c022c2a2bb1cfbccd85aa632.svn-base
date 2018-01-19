@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1B960CFD-9A93-49C3-BC7E-EDF636774AAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ean.edu.desarrollo.web</RootNamespace>
+    <AssemblyName>ean.edu.desarrollo.web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Resources\css\index.css" />
+    <Content Include="Resources\favicons.ico\android-icon-144x144.png" />
+    <Content Include="Resources\favicons.ico\android-icon-192x192.png" />
+    <Content Include="Resources\favicons.ico\android-icon-36x36.png" />
+    <Content Include="Resources\favicons.ico\android-icon-48x48.png" />
+    <Content Include="Resources\favicons.ico\android-icon-72x72.png" />
+    <Content Include="Resources\favicons.ico\android-icon-96x96.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-114x114.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-120x120.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-144x144.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-152x152.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-180x180.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-57x57.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-60x60.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-72x72.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-76x76.png" />
+    <Content Include="Resources\favicons.ico\apple-icon-precomposed.png" />
+    <Content Include="Resources\favicons.ico\apple-icon.png" />
+    <Content Include="Resources\favicons.ico\browserconfig.xml" />
+    <Content Include="Resources\favicons.ico\favicon-16x16.png" />
+    <Content Include="Resources\favicons.ico\favicon-32x32.png" />
+    <Content Include="Resources\favicons.ico\favicon-96x96.png" />
+    <Content Include="Resources\favicons.ico\favicon.ico" />
+    <Content Include="Resources\favicons.ico\ms-icon-144x144.png" />
+    <Content Include="Resources\favicons.ico\ms-icon-150x150.png" />
+    <Content Include="Resources\favicons.ico\ms-icon-310x310.png" />
+    <Content Include="Resources\favicons.ico\ms-icon-70x70.png" />
+    <Content Include="Resources\images\bg.jpg" />
+    <Content Include="Resources\images\logo.png" />
+    <Content Include="Resources\js\index.js" />
+    <Content Include="Resources\vendors\alertify\css\alertify.bootstrap.css" />
+    <Content Include="Resources\vendors\alertify\css\alertify.core.css" />
+    <Content Include="Resources\vendors\alertify\css\alertify.default.css" />
+    <Content Include="Resources\vendors\alertify\js\alertify.min.js" />
+    <Content Include="Resources\vendors\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Resources\vendors\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resources\vendors\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resources\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Resources\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\vendors\jquery\jquery-2.2.3.min.js" />
+    <Content Include="Resources\vendors\normalize\css\normalize.css" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\masterpage\Master.master.cs">
+      <DependentUpon>Master.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resources\masterpage\Master.master.designer.cs">
+      <DependentUpon>Master.master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\.DS_Store" />
+    <Content Include="Resources\css\.DS_Store" />
+    <Content Include="Resources\favicons.ico\.DS_Store" />
+    <Content Include="Resources\favicons.ico\manifest.json" />
+    <Content Include="Resources\images\.DS_Store" />
+    <Content Include="Resources\js\.DS_Store" />
+    <Content Include="Resources\masterpage\.DS_Store" />
+    <Content Include="Resources\masterpage\Master.master" />
+    <Content Include="Resources\vendors\.DS_Store" />
+    <Content Include="Resources\vendors\alertify\.DS_Store" />
+    <Content Include="Resources\vendors\alertify\css\.DS_Store" />
+    <Content Include="Resources\vendors\alertify\js\.DS_Store" />
+    <Content Include="Resources\vendors\bootstrap\.DS_Store" />
+    <Content Include="Resources\vendors\bootstrap\css\.DS_Store" />
+    <Content Include="Resources\vendors\bootstrap\js\.DS_Store" />
+    <Content Include="Resources\vendors\font-awesome\.DS_Store" />
+    <Content Include="Resources\vendors\font-awesome\css\.DS_Store" />
+    <Content Include="Resources\vendors\font-awesome\fonts\.DS_Store" />
+    <Content Include="Resources\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resources\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resources\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resources\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resources\vendors\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Resources\vendors\jquery\.DS_Store" />
+    <Content Include="Resources\vendors\normalize\.DS_Store" />
+    <Content Include="Resources\vendors\normalize\css\.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties xmlns="">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63995/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>

@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace ean.edu.desarrollo.logica
+{
+	public class MyClass
+	{
+		public MyClass ()
+		{
+		}
+	}
+}
+

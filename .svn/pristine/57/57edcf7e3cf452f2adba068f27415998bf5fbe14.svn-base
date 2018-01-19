@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using ean.edu.desarollo.web.objetos;
+using ean.edu.desarrollo.web.logica;
+
+namespace ean.edu.desarrollo.web.controladores
+{
+    public partial class FacturaDeVenta : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+
+                try
+                {
+                    List<Cliente> estratos = (List<Cliente>)Consultas.ConsultarTodos("ClienteDB", null);
+                    ddlClientes.DataSource = estratos;
+                    ddlClientes.DataValueField = "IdCliente";
+                    ddlClientes.DataTextField = "RazonSocial";
+                    ddlClientes.Items.Insert(0, new ListItem("Seleccionar...", "-1"));
+
+                    ddlClientes.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    litNotificaciones.Text = "<script> $(document).ready(function () {alertarTexto('Error cargando la página', 2);});</script>";
+                }
+
+            }
+        }
+
+        protected void ddlClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente cliente = (Cliente)ddlClientes.SelectedItem;
+
+            }
+            catch (Exception ex)
+            {
+
+                if (ddlClientes.SelectedValue != "-1")
+                {
+
+                }
+                else {
+
+
+                }
+
+                litNotificaciones.Text = "<script> $(document).ready(function () {alertarTexto('Error Inesperado', 2);});</script>";
+            }
+        }
+    }
+}

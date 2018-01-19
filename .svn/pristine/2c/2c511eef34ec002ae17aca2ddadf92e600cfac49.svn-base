@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using ean.edu.desarollo.web.objetos;
+using ean.edu.desarrollo.web.logica;
+
+namespace ean.edu.desarrollo.web.controladores
+{
+    public partial class detalleFactura : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            if (!IsPostBack) {
+                try
+                {
+                    int idFactura = int.Parse(Request.QueryString["IdFactura"]);
+
+                    Factura factura = (Factura)Consultas.ConsultarID("FacturaDB", new object[] { idFactura });
+
+                    if (factura != null)
+                    {
+
+                        lit_razonsocial.Text = factura.Cliente.RazonSocial;
+                        lit_id.Text = factura.Cliente.NumeroIdentificacion;
+                        lit_estrato.Text = factura.Cliente.Estrato.NombreEstrato;
+                        lit_fecha.Text = factura.Fecha.ToShortDateString();
+                        lit_consecutivo.Text = factura.Consecutivo;
+                        lit_cargobasico.Text = "20000";
+                        //lit_valorbaseestrato.Text=factura.DetalleFactura[0].tar
+
+                        object a = (factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 1));
+
+                        lit_cantidadtelevision.Text = ((List<DetalleFactura>)(factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 1).ToList()))[0].CantidadConsumo.ToString();
+                        lit_cantidadinternet.Text = ((List<DetalleFactura>)(factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 3).ToList()))[0].CantidadConsumo.ToString();
+                        lit_cantidadtelefonia.Text = ((List<DetalleFactura>)(factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 2).ToList()))[0].CantidadConsumo.ToString();
+
+                        lit_valortelevision.Text = ((List<DetalleFactura>)(factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 1).ToList()))[0].ValorConsumo.ToString();
+                        lit_valorinternet.Text = ((List<DetalleFactura>)(factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 3).ToList()))[0].ValorConsumo.ToString();
+                        lit_valortelefonia.Text = ((List<DetalleFactura>)(factura.DetalleFactura.Where(x => x.Servicio.IdServicio == 2).ToList()))[0].ValorConsumo.ToString();
+
+
+                    }
+                    
+
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,39 @@
+﻿<%@ Page Title="Clientes Registrados" Language="C#" MasterPageFile="Master.Master" AutoEventWireup="true" CodeBehind="verClientesRegistrados.aspx.cs" Inherits="ean.edu.desarrollo.web.controladores.verClientesRegistrados" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHeader" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    <div class="contenedor_general">
+        <div class="row titulo_contenedor">
+            <h3>Clientes registrados</h3>
+        </div>
+        <table class="table table-striped">
+            <caption>Clientes Registrados</caption>
+            <thead>
+                <tr>
+                    <th>CC</th>
+                    <th>Número ID</th>
+                    <th>Primer Nombre</th>
+                    <th>Segundo Nombre</th>
+                    <th>Pimer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Estrato social</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="espacio_boton_envio">
+            <a href="RegistrarCliente.aspx" class='btn_send'>Registrar nuevo cliente</a>
+        </div>
+    </div>
+</asp:Content>

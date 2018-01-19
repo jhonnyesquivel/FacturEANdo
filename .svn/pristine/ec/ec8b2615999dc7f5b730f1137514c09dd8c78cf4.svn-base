@@ -1,0 +1,105 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ean.edu.desarollo.web.objetos;
+using ean.edu.desarrollo.net.persistencia.adonet.Interfaces;
+using System.Collections.Generic;
+
+
+namespace ean.edu.desarrollo.net.persistencia.adonet
+{
+    public class FacturaDB : AbstractCrud
+    {
+
+
+        #region Constructor
+        public FacturaDB(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+        #endregion
+        #region propiedades
+
+        private Factura _Factura;
+
+        public Factura Factura
+        {
+            get
+            {
+                return _Factura;
+            }
+
+            set
+            {
+                _Factura = value;
+            }
+        }
+
+        #endregion
+
+        public FacturaDB()
+        {
+
+        }
+
+        protected override string Insertar(ref SqlCommand cmd)
+        {
+
+            #region Insertar
+            cmd.CommandText = "proFacturasInsertar";
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter IdentityParam = new SqlParameter("@IdFactura", SqlDbType.TinyInt);
+            IdentityParam.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(IdentityParam);
+            cmd.Parameters.AddWithValue("@IdCliente", Factura.Cliente.IdCliente);
+            cmd.Parameters.AddWithValue("@Fecha", Factura.Fecha);
+            #endregion
+
+            return "@IdFactura";
+
+        }
+
+        protected override void Modificar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Eliminar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarTodos(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarId(ref SqlCommand cmd, object id)
+        {
+            cmd.CommandText = "proFacturasSeleccionarId";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdFactura", (int)id);
+        }
+
+        protected override object ConstruirListado(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override object ConstruirObjeto(SqlDataReader reader)
+        {
+            Factura item = new Factura();
+            while (reader.Read())
+            {
+                item.IdFactura = int.Parse(reader["IdFactura"].ToString());
+                item.Cliente = (Cliente)(new ClienteDB(this.Connection, this.Transaction).SeleccionarId(int.Parse(reader["IdCliente"].ToString())));
+                item.Consecutivo = reader["Consecutivo"].ToString();
+                item.Fecha = DateTime.Parse(reader["Fecha"].ToString());
+                item.DetalleFactura = (List<DetalleFactura>)(new DetalleFacturaDB(this.Connection, this.Transaction).SeleccionarDetalleFactura(item.IdFactura));
+            }
+            reader.Close();
+            return item;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ean.edu.desarollo.web.objetos;
+using ean.edu.desarrollo.net.persistencia.adonet.Interfaces;
+using System.Collections.Generic;
+
+namespace ean.edu.desarrollo.net.persistencia.adonet
+{
+    public class TarifaServicioBD : AbstractCrud
+    {
+
+        #region Constructor
+        public TarifaServicioBD(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+
+        public TarifaServicioBD()
+        {
+
+        }
+
+        #endregion
+        #region propiedades
+
+        private TarifaServicio _TarifaServicio;
+
+        public TarifaServicio Estrato
+        {
+            get
+            {
+                return _TarifaServicio;
+            }
+
+            set
+            {
+                _TarifaServicio = value;
+            }
+        }
+
+        #endregion
+
+
+
+        public TarifaServicio SeleccionarTarifa(short IdServicio, byte IdEstrato)
+        {
+
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            cmd.CommandText = "proTarifasConsultar";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdServicio", (IdServicio));
+            cmd.Parameters.AddWithValue("@IdEstrato", (IdEstrato));
+            SqlDataReader dr = cmd.ExecuteReader();
+            return (TarifaServicio)ConstruirObjeto(dr);
+
+        }
+
+        protected override string Insertar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Modificar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Eliminar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarTodos(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarId(ref SqlCommand cmd, object id)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override object ConstruirListado(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override object ConstruirObjeto(SqlDataReader reader)
+        {
+            TarifaServicio item = new TarifaServicio();
+            while (reader.Read())
+            {
+
+                item.ValorServicio = decimal.Parse(reader["ValorServicio"].ToString());
+                item.Unidad = new UnidadTarifa() { IdUnidad = byte.Parse(reader["IdUnidad"].ToString()), NombreUnidad = reader["NombreUnidad"].ToString() };
+                item.Estrato = (Estrato)(new EstratoDB(this.Connection, this.Transaction).SeleccionarId(byte.Parse(reader["IdEstrato"].ToString())));
+
+            }
+            reader.Close();
+            return item;
+        }
+
+
+    }
+}

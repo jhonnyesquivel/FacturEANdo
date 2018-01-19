@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.persistencia.Interfaces
+{
+    public abstract class AbstractCrud
+    {
+
+        private SqlTransaction _Transaction;
+        private SqlConnection _connection;
+
+        public AbstractCrud(SqlConnection pConnection, SqlTransaction pTransaction) {
+            _Transaction = pTransaction;
+            _connection = pConnection;
+        }
+
+        public SqlTransaction Transaction
+        {
+            get
+            {
+                return _Transaction;
+            }
+
+            set
+            {
+                _Transaction = value;
+            }
+        }
+
+        public SqlConnection Connection
+        {
+            get
+            {
+                return _connection;
+            }
+
+            set
+            {
+                _connection = value;
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\bin\Release\ean.edu.desarrollo.modelo.pocso.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\bin\Release\ean.edu.desarrollo.modelo.pocso.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Release\ean.edu.desarrollo.modelo.pocso.csprojResolveAssemblyReference.cache
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Release\ean.edu.desarrollo.modelo.pocso.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Release\ean.edu.desarrollo.modelo.pocso.pdb

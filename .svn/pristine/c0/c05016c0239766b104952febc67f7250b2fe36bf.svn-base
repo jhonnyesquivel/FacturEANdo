@@ -1,0 +1,115 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ean.edu.desarollo.objetos;
+using ean.edu.desarrollo.persistencia.Interfaces;
+using System.Collections.Generic;
+
+namespace ean.edu.desarrollo.persistencia
+{
+    public class EstratoDB : AbstractCrud
+    {
+
+
+        #region Constructor
+        public EstratoDB(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+
+        public EstratoDB()
+        {
+
+        }
+
+        #endregion
+        #region propiedades
+
+        private Estrato _Estrato;
+
+        public Estrato Estrato
+        {
+            get
+            {
+                return _Estrato;
+            }
+
+            set
+            {
+                _Estrato = value;
+            }
+        }
+
+        #endregion
+
+        protected override string Insertar(ref SqlCommand cmd)
+        {
+            #region Insertar
+            cmd.CommandText = "proEstratosInsertar";
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter IdentityParam = new SqlParameter("@IdEstrato", SqlDbType.TinyInt);
+            IdentityParam.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(IdentityParam);
+            cmd.Parameters.AddWithValue("@NombreEstrato", Estrato.NombreEstrato);
+            cmd.Parameters.AddWithValue("@NivelEstrato", Estrato.NivelEstrato);
+            #endregion
+            return "@IdEstrato";
+        }
+
+        protected override object ConstruirListado(SqlDataReader reader)
+        {
+
+            List<Estrato> lisEstratos = new List<Estrato>();
+            while (reader.Read())
+            {
+                Estrato item = new Estrato();
+                item.IdEstrato = byte.Parse(reader["IdEstrato"].ToString());
+                item.NivelEstrato = char.Parse(reader["NivelEstrato"].ToString());
+                item.NombreEstrato = reader["NombreEstrato"].ToString();
+                lisEstratos.Add(item);
+            }
+            reader.Close();
+            return lisEstratos;
+        }
+
+ 
+        protected override object ConstruirObjeto(SqlDataReader reader)
+        {
+            Estrato item = new Estrato();
+            while (reader.Read())
+            {
+
+                item.IdEstrato = byte.Parse(reader["IdEstrato"].ToString());
+                item.NivelEstrato = char.Parse(reader["NivelEstrato"].ToString());
+                item.NombreEstrato = reader["IdEstrato"].ToString();
+
+            }
+            return item;
+        }
+
+
+        protected override void Eliminar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Modificar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarTodos(ref SqlCommand cmd)
+        {
+            cmd.CommandText = "proSeleccionarTodos";
+            cmd.CommandType = CommandType.StoredProcedure;
+            
+        }
+
+        protected override void SeleccionarId(ref SqlCommand cmd)
+        {
+            cmd.CommandText = "proSeleccionarId";
+            cmd.CommandType = CommandType.StoredProcedure;
+        }
+    }
+}

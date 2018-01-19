@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using ean.edu.desarollo.web.objetos;
+using ean.edu.desarrollo.web.logica;
+
+namespace ean.edu.desarrollo.web.controladores
+{
+    public partial class RegistrarEstrato : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_guardarEstrato_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                Estrato estrato = new Estrato();
+                estrato.NivelEstrato = char.Parse(txt_estrato.Text);
+                estrato.NombreEstrato = "Estrato " + estrato.NivelEstrato;
+                estrato.ValorEstrato = decimal.Parse(txtValorEstrato.Text.Trim());
+                estrato.CargoFijo = decimal.Parse(txtCargoFijo.Text.Trim());
+                FactureandoBL factureandoBL = new FactureandoBL();
+
+                if (factureandoBL.InsertarEstrato(ref estrato))
+                {
+                    litNotificaciones.Text = "<script> $(document).ready(function () {alertarTexto('Registro del estrato exitoso', 1);});</script>";
+                }
+                else {
+                    litNotificaciones.Text = "<script> $(document).ready(function () {alertarTexto('Error almacenando la información', 2);});</script>";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                litNotificaciones.Text = "<script> $(document).ready(function () {alertarTexto('Error almacenando la información', 2);});</script>";
+            }
+        }
+    }
+}

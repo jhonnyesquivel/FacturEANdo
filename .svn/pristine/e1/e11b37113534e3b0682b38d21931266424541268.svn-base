@@ -1,0 +1,140 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ean.edu.desarollo.web.objetos;
+
+namespace ean.edu.desarrollo.net.persistencia.adonet.Interfaces
+{
+    public abstract class AbstractCrud : InterfazCrud
+    {
+
+        #region Atributos
+        private SqlTransaction _Transaction;
+        private SqlConnection _connection;
+        private object _Identity;
+        #endregion
+
+        public AbstractCrud(SqlConnection pConnection, SqlTransaction pTransaction)
+        {
+            _Transaction = pTransaction;
+            _connection = pConnection;
+        }
+
+        public AbstractCrud()
+        {
+          
+        }
+
+        #region Propiedades
+        public SqlTransaction Transaction
+        {
+            get
+            {
+                return _Transaction;
+            }
+
+            set
+            {
+                _Transaction = value;
+            }
+        }
+
+        public SqlConnection Connection
+        {
+            get
+            {
+                return _connection;
+            }
+
+            set
+            {
+                _connection = value;
+            }
+        }
+
+        public object Identity
+        {
+            get
+            {
+                return _Identity;
+            }
+
+            set
+            {
+                _Identity = value;
+            }
+        }
+        #endregion
+
+
+        public bool Insertar()
+        {
+            bool resultado = false;
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            string IdentityParamName = Insertar(ref cmd);
+            resultado = cmd.ExecuteNonQuery() != 0;
+            if (resultado)
+            {
+                Identity = cmd.Parameters[IdentityParamName].Value;
+            }
+            return resultado;
+        }
+
+        public bool Modificar()
+        {
+            bool resultado = false;
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            Modificar(ref cmd);
+            resultado = cmd.ExecuteNonQuery() != 0;
+
+
+            return resultado;
+        }
+
+        public object SeleccionarTodos()
+        {
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            SeleccionarTodos(ref cmd);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return ConstruirListado(dr);
+        }
+
+        public object SeleccionarId(object id)
+        {
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            SeleccionarId(ref cmd, id);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return ConstruirObjeto(dr);
+        }
+
+        public bool Eliminar()
+        {
+            bool resultado = false;
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            Eliminar(ref cmd);
+            resultado = cmd.ExecuteNonQuery() != 0;
+            return resultado;
+        }
+
+        protected abstract string Insertar(ref SqlCommand cmd);
+        protected abstract void Modificar(ref SqlCommand cmd);
+        protected abstract void Eliminar(ref SqlCommand cmd);
+
+        protected abstract void SeleccionarTodos(ref SqlCommand cmd);
+        protected abstract void SeleccionarId(ref SqlCommand cmd, object id);
+
+        protected abstract object ConstruirListado(SqlDataReader reader);        
+        protected abstract object ConstruirObjeto(SqlDataReader reader);
+        
+
+       
+    }
+}

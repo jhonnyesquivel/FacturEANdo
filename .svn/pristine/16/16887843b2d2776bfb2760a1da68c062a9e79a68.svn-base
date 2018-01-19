@@ -1,0 +1,174 @@
+/* Consideraciones para este CSS:
+	En este proyecto se montarán el 90% de los estilos
+	en una sola hoja de estilos, ya que según una investigación
+	que hicimos sobre la carga rápida de las páginas y optimización,
+	entre más recursos cargue la página peor será su desempeño.
+*/
+
+body
+{
+    /* De la fuente y el tamaño se està encargando Bootstrap */
+    background-image: url('../images/bg.jpg');
+}
+.contenedor_global
+{
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header
+{
+	border-bottom: 2.5px solid #00C887;
+    background-color: #F3F3F3;
+    margin-bottom: .5em;
+    border-radius: 0 0 7px 7px;
+}
+#logo
+{
+	margin: 0;
+}
+#logo img
+{
+	width: 10em;
+    margin: .5em 0 .5em 0;
+}
+.contenedor_redes {
+    margin: 1.5em;
+}
+.contenedor_redes span
+{
+    margin: .1em;
+    font-size: 1.5em;
+    color: #00BF75;
+}
+/* Fin Estilos Header */
+
+/*estilos para contenido */
+
+
+
+
+/* fin de estilos para contenido */
+
+/* Estilos para menú */
+
+.navegacion {
+	border-right: 2px solid #00C887 !important;
+    border-left: 2px solid #00C887 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background-color: #F3F3F3 !important;
+    margin: .5em 0 .5em 0 !important;
+}
+
+/* Fin de estilos de menu */
+
+
+/* Estilos Footer */
+
+#logo_footer
+{
+	margin: 0;
+}
+#logo_footer img
+{
+	width: 6em;
+}
+.footer
+{
+	background-color: #F3F3F3;
+    padding: 1em;
+    color: grey;
+    border-bottom: none;
+    border-radius: 7px 7px 0 0;
+    border-top: 2.5px solid #00C887;
+    margin-top: .5em;
+}
+
+/* Formulario para registrar clientes */
+
+.titulo_contenedor
+{
+    margin: 0 0 .5em 0!important;
+    padding: 0 0 .5em 0!important;
+    color: grey;
+    border-bottom: 2px solid #00C887;
+}
+.titulo_contenedor h3
+{
+    margin: 0;
+}
+.contenedor_general
+{
+    text-align: left;
+    background-color: white;
+    padding: 1em;
+    color: grey;
+    border-radius: 7px;
+}
+.contenedor_general input[type='text'],
+input[type='number'],
+select
+{
+    padding: .5em;
+    margin: .5em;
+    width: 95%;
+    border: 1.5px solid #00C887;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #F9F9F9;
+}
+.contenedor_general select
+{
+    cursor: pointer;
+}
+.espacio_boton_envio
+{
+    text-align: right;
+    margin: .5em 0 0 0!important;
+    padding: 0 0 .5em 0!important;
+    border-top: 2px solid #00C887;
+}
+
+.btn_send
+{
+    padding: .5em;
+    min-width: 8em;
+    border: 1.5px solid #00C887;
+    font-weight: 600;
+    background-color: #F9F9F9;
+    margin: 1em 0 1em 2.8em;
+    transition: .5s;
+}
+.btn_send a
+{
+    color: grey !important;
+    text-decoration: none;
+}
+.btn_send:hover
+{
+    color: white;
+    background-color: #00C887;
+}
+/* Tabla ver clientes */
+.tablaVerClientes {
+    border: 1px solid #C0C0C0;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.tablaVerClientes th {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+    background: #F0F0F0;
+}
+
+.tablaVerClientes td {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}

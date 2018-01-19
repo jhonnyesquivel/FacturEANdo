@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="ean.edu.desarrollo.web.controladores.Master" %>
+
+<!DOCTYPE html>
+<!-- MASTER PAGE
+   Título Proyecto: FacturEANdo
+   Desarrolladores: Jhonny Alejandro Esquivel Guerrero y Luis Carlos Mejía García
+   Entorno de ejecución: .NET FRAMEWORK C# con SQL server sobre Internet Information Server y Javascript sobre Jquery para complementos de experiencia del usuario.
+   Diseño: Bootstrap para maquetado responsive design, Font Awesome para íconos tipo fuente, Alertify para alertas amigables y fancybox para visualización del detalle de las facturas.
+   
+    -->
+<html>
+<head runat="server">
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!-- Jquery primero que TODOS -->
+    <script type="text/javascript" src="Resources/vendors/jquery/jquery-2.2.3.min.js"></script>
+
+    <!-- Nuestro CSS -->
+    <link rel="stylesheet" type="text/css" href="Resources/css/index.css">
+    <!-- CSS externos, para maquetado y mejor experiencia de usuario -->
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/normalize/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Resources/alertifyjs.org/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="Resources/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- Por aquí incluimos el FAVICON compatible para el 98% de los dispositivos de escritorio y moviles, gracias a http://www.favicon-generator.org/ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="Resources/favicons.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Resources/favicons.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Resources/favicons.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Resources/favicons.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Resources/favicons.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Resources/favicons.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Resources/favicons.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Resources/favicons.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Resources/favicons.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Resources/favicons.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Resources/favicons.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Resources/favicons.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Resources/favicons.ico/favicon-16x16.png">
+    <link rel="manifest" href="Resources/favicons.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#00C887">
+    <meta name="msapplication-TileImage" content="Resources/favicons.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#00C887">
+    <title>FacturEANdo - Inicio</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHeader" runat="server" />
+</head>
+<body>
+    <div class='container-fluid contenedor_global'>
+        <div class='row header'>
+            <div class='col-md-10'>
+                <figure id='logo'>
+                    <img src="resources/images/logo.png" alt='Logo'>
+                </figure>
+            </div>
+            <div class='col-md-2'>
+                <div class='contenedor_redes'>
+                    <span class="fa fa-facebook-official"></span>
+                    <span class="fa fa-twitter-square"></span>
+                    <span class='fa fa-instagram'></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-default navegacion">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Menú | </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+                        <ul class="nav navbar-nav">
+                            <li><a href="registrarCliente.aspx">Registrar nuevo cliente</a></li>
+                            <li><a href="RegistrarEstrato.aspx">Registrar estrato</a></li>
+                            <li><a href="FacturaDeVenta.aspx">Generar factura</a></li>
+                            <li><a href="verClientesRegistrados.aspx">Ver clientes registrados</a></li>
+                            <li><a href="verFacturasRegistradas.aspx">Ver facturas registradas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class='row'>
+            <div class='col-md-12'>
+                <div id="container">
+                    <form runat="server">
+                        <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class='col-md-10'>
+                Desarrollado por Jhonny Esquivel y Luis Carlos Mejía - Desarrollo Web 2016-I
+           
+            </div>
+            <div class='col-md-2'>
+                <figure id='logo_footer'>
+                    <img src="Resources/images/logo.png" alt='Logo'>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!-- Nuestro JS -->
+    <script type="text/javascript" src="Resources/js/index.js"></script>
+    <!-- JS de externos -->
+    <script type="text/javascript" src="Resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Resources/alertifyjs.org/js/alertify.js"></script>
+    <script type="text/javascript" src="Resources/fancybox/jquery.fancybox.js"></script>
+</body>
+</html>

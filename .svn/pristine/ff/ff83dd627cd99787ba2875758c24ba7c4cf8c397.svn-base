@@ -1,0 +1,156 @@
+﻿using ean.edu.desarrollo.modelo.pocso;
+using ean.edu.desarrollo.modelo.logica.Interfaces;
+using ean.edu.desarrollo.persistencia.adonet;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.modelo.logica
+{
+    public class FactureandoBL : AbstractLogica
+    {
+
+
+        public bool InsertarCliente(ref Cliente cliente)
+        {
+
+            bool retorno = false;
+
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    ManejadorCliente clientedb = new ManejadorCliente(connection, transaction);
+                    clientedb.Cliente = cliente;
+                    if (clientedb.Insertar())
+                    {
+                        cliente.IdCliente = int.Parse(clientedb.Identity.ToString());
+                        transaction.Commit();
+                        retorno = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+            return retorno;
+
+        }
+
+
+        public bool InsertarEstrato(ref Estrato estrato)
+        {
+
+            bool retorno = false;
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    ManejadorEstrato estratodb = new ManejadorEstrato(connection, transaction);
+                    estratodb.Estrato = estrato;
+                    if (estratodb.Insertar())
+                    {
+                        estrato.IdEstrato = byte.Parse(estratodb.Identity.ToString());
+                        transaction.Commit();
+                        retorno = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+            return retorno;
+
+        }
+
+
+        public bool InsertarFactura(ref Factura factura)
+        {
+
+            bool retorno = false;
+
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    ManejadorFactura facturadb = new ManejadorFactura(connection, transaction);
+                    facturadb.Factura = factura;
+
+
+
+                    if (facturadb.Insertar())
+                    {
+                        factura.IdFactura = int.Parse(facturadb.Identity.ToString());
+
+                        foreach (DetalleFactura item in factura.DetalleFactura)
+                        {
+                            ManejadorTarifaServicio tarifaserviciobd = new ManejadorTarifaServicio(connection, transaction);
+                            TarifaServicio tarifaservicio = tarifaserviciobd.SeleccionarTarifa(item.Servicio.IdServicio, factura.Cliente.Estrato.IdEstrato);
+
+                            item.Factura = factura;
+                            item.ValorConsumo = item.CantidadConsumo * tarifaservicio.ValorServicio;
+
+
+                            ManejadorDetalleFactura ManejadorDetalleFactura = new ManejadorDetalleFactura(connection, transaction);
+                            ManejadorDetalleFactura.DetalleFactura = item;
+                            if (!ManejadorDetalleFactura.Insertar())
+                            {
+
+                                throw new Exception("Error registrando el detalle");
+                            }
+                        }
+
+
+
+
+                        transaction.Commit();
+                        retorno = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+            return retorno;
+
+        }
+
+
+        public static decimal ObtenerCargoVariableFactura(Factura factura, decimal cargotv, decimal cargotel, decimal cargoint)
+        {
+
+            decimal cargo_variable = (2 * (decimal)Math.Log10((double)(3 * factura.Cliente.Estrato.ValorEstrato)))+(2 * (cargotv  + cargotel - cargoint)) / (3 * cargoint + 1000);
+
+            return cargo_variable;
+        }
+
+    }
+}

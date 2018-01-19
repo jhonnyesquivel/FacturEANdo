@@ -1,0 +1,27 @@
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.csprojResolveAssemblyReference.cache
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.logica.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.logica.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.pocso.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.persistencia.adonet.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.pocso.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.persistencia.adonet.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.logica.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.logica.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.pocso.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.persistencia.adonet.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.pocso.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.persistencia.adonet.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.csprojResolveAssemblyReference.cache
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.logica.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.logica.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.pocso.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.persistencia.adonet.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.modelo.pocso.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Debug\ean.edu.desarrollo.persistencia.adonet.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.csprojResolveAssemblyReference.cache
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Debug\ean.edu.desarrollo.modelo.logica.pdb

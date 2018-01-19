@@ -1,0 +1,88 @@
+﻿using ean.edu.desarollo.web.objetos;
+using ean.edu.desarrollo.logica.Interfaces;
+using ean.edu.desarrollo.net.persistencia.adonet;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.web.logica
+{
+    public class FactureandoBL : AbstractLogica
+    {
+
+
+        public bool InsertarCliente(ref Cliente cliente)
+        {
+
+            bool retorno = false;
+
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    ClienteDB clientedb = new ClienteDB(connection, transaction);
+                    clientedb.Cliente = cliente;
+                    if (clientedb.Insertar())
+                    {
+                        cliente.IdCliente = int.Parse(clientedb.Identity.ToString());
+                        transaction.Commit();
+                        retorno = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+            return retorno;
+
+        }
+
+
+        public bool InsertarEstrato(ref Estrato estrato)
+        {
+
+            bool retorno = false;
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    EstratoDB estratodb = new EstratoDB(connection, transaction);
+                    estratodb.Estrato = estrato;
+                    if (estratodb.Insertar())
+                    {
+                        estrato.IdEstrato = byte.Parse(estratodb.Identity.ToString());
+                        transaction.Commit();
+                        retorno = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }            
+            return retorno;
+
+        }
+
+
+    }
+}

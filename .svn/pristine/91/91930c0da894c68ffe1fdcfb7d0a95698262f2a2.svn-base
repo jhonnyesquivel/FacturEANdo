@@ -1,0 +1,15 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="verFacturasRegistradas.aspx.cs" Inherits="ean.edu.desarrollo.web.controladores.verFacturasRegistradas" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHeader" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    <asp:GridView ID="tablafacturas" runat="server" CssClass="tablefacturas" border="0">
+        <Columns>
+            <asp:BoundField HeaderText="Consecutivo"/>
+            <asp:BoundField HeaderText="Nombre del cliente"/>
+            <asp:BoundField HeaderText="Fecha de registro"/>
+            <asp:BoundField HeaderText="Total"/>
+            <asp:HyperLinkField NavigateUrl="~/verFacturasRegistradas.aspx" text="Ver detalle"/>
+        </Columns>
+    </asp:GridView>
+
+</asp:Content>

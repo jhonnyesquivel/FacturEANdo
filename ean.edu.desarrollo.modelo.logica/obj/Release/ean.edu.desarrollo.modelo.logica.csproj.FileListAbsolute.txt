@@ -1,0 +1,9 @@
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Release\ean.edu.desarrollo.modelo.logica.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Release\ean.edu.desarrollo.modelo.logica.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Release\ean.edu.desarrollo.modelo.pocso.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Release\ean.edu.desarrollo.persistencia.adonet.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Release\ean.edu.desarrollo.modelo.pocso.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\bin\Release\ean.edu.desarrollo.persistencia.adonet.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Release\ean.edu.desarrollo.modelo.logica.csprojResolveAssemblyReference.cache
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Release\ean.edu.desarrollo.modelo.logica.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.logica\obj\Release\ean.edu.desarrollo.modelo.logica.pdb

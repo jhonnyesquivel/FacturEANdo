@@ -1,0 +1,72 @@
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.csprojResolveAssemblyReference.cache
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\csc.exe
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\System.Collections.Immutable.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\System.Reflection.Metadata.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\vbc.exe
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\VBCSCompiler.exe
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\VBCSCompiler.exe.config
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.dll.config
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.logica.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.pocso.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.persistencia.adonet.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.logica.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.pocso.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.persistencia.adonet.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\csc.exe
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\vbc.exe
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\VBCSCompiler.exe
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.dll.config
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.logica.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.pocso.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.persistencia.adonet.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.logica.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.pocso.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.persistencia.adonet.pdb
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.csprojResolveAssemblyReference.cache
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.dll
+C:\Users\JHONNY-DELL\Desktop\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\csc.exe
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.CSharp.Core.targets
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\System.Collections.Immutable.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\System.Reflection.Metadata.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\vbc.exe
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\VBCSCompiler.exe
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\roslyn\VBCSCompiler.exe.config
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.dll.config
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.web.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.logica.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.pocso.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.persistencia.adonet.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.logica.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.modelo.pocso.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\bin\ean.edu.desarrollo.persistencia.adonet.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.csprojResolveAssemblyReference.cache
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.web\obj\Debug\ean.edu.desarrollo.web.pdb

@@ -1,0 +1,10 @@
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.pocso\bin\Debug\ean.edu.desarrollo.modelo.pocso.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.pocso\bin\Debug\ean.edu.desarrollo.modelo.pocso.pdb
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Debug\ean.edu.desarrollo.modelo.pocso.csprojResolveAssemblyReference.cache
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Debug\ean.edu.desarrollo.modelo.pocso.dll
+F:\Documents\Visual Studio 2015\Projects\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Debug\ean.edu.desarrollo.modelo.pocso.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\bin\Debug\ean.edu.desarrollo.modelo.pocso.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\bin\Debug\ean.edu.desarrollo.modelo.pocso.pdb
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Debug\ean.edu.desarrollo.modelo.pocso.csprojResolveAssemblyReference.cache
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Debug\ean.edu.desarrollo.modelo.pocso.dll
+J:\Google Drive\Univerdidad\Desarrollo Web\Proyecto WEB\FacturEANdo\FacturEANdo\ean.edu.desarrollo.modelo.pocso\obj\Debug\ean.edu.desarrollo.modelo.pocso.pdb

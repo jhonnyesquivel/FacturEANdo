@@ -1,0 +1,40 @@
+function alertarTexto(texto, parametro)
+{
+    // 1 exitoso
+    // 2 fallido
+    if(parametro === 1)
+    {
+        alertify.alert(texto);
+        //alertify.success(texto);
+    }
+    else if (parametro === 2)
+    {
+        alertify.alert(texto);
+        //alertify.error(texto);
+    }
+}
+function limpiarCampos()
+{
+    var cuerpo = $('body').find('input');
+    $.each(cuerpo, function (index, value) {
+
+    });
+}
+
+function ValidarNumericos(ControlId, event) {
+    var charCode = event.which ? event.which : event.keyCode;
+    if (charCode == 8)
+        return true;
+    var control = ControlId;
+    if (String.fromCharCode(charCode) == '.' || charCode == 32)
+        return false;
+    var valorCaja = control.value + String.fromCharCode(charCode);
+    if (valorCaja) {
+        if (!isNaN(String.fromCharCode(charCode))) {
+            return true;
+        }
+        else
+            return false;
+    }
+    return true;
+}

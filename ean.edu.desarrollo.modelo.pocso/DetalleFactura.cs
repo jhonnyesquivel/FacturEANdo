@@ -1,0 +1,82 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.modelo.pocso
+{
+    public class DetalleFactura
+    {
+        private int _IdDetalleFactura;
+        private Factura _Factura;
+        private Servicio _Servicio;
+        private int _CantidadConsumo;
+        private decimal _ValorConsumo;
+
+        public int IdDetalleFactura
+        {
+            get
+            {
+                return _IdDetalleFactura;
+            }
+
+            set
+            {
+                _IdDetalleFactura = value;
+            }
+        }
+
+        public Factura Factura
+        {
+            get
+            {
+                return _Factura;
+            }
+
+            set
+            {
+                _Factura = value;
+            }
+        }
+
+        public Servicio Servicio
+        {
+            get
+            {
+                return _Servicio;
+            }
+
+            set
+            {
+                _Servicio = value;
+            }
+        }
+
+        public int CantidadConsumo
+        {
+            get
+            {
+                return _CantidadConsumo;
+            }
+
+            set
+            {
+                _CantidadConsumo = value;
+            }
+        }
+
+        public decimal ValorConsumo
+        {
+            get
+            {
+                return _ValorConsumo;
+            }
+
+            set
+            {
+                _ValorConsumo = value;
+            }
+        }
+    }
+}

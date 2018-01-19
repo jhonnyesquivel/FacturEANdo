@@ -1,0 +1,54 @@
+﻿using ean.edu.desarollo.objetos;
+using ean.edu.desarrollo.logica.Interfaces;
+using ean.edu.desarrollo.persistencia;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.logica
+{
+    public class FactureandoBL : AbstractLogica
+    {
+
+
+        public bool InsertarCliente(ref Cliente cliente)
+        {
+
+          
+
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    ClienteDB clientedb = new ClienteDB(connection, transaction);
+                    clientedb.Cliente = cliente;
+                    if (clientedb.Insertar())
+                    {
+                        cliente.IdCliente = int.Parse(clientedb.Identity.ToString());
+                        transaction.Commit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+
+
+            return false;
+        }
+
+
+    }
+}

@@ -1,0 +1,87 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ean.edu.desarollo.objetos;
+using ean.edu.desarrollo.persistencia.Interfaces;
+using System.Collections.Generic;
+
+namespace ean.edu.desarrollo.persistencia
+{
+    public class ClienteDB : AbstractCrud
+    {
+        private Cliente _Cliente;
+
+        #region Constructor
+        public ClienteDB(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+        #endregion
+        #region Propiedades
+        public Cliente Cliente
+        {
+            get
+            {
+                return _Cliente;
+            }
+
+            set
+            {
+                _Cliente = value;
+            }
+        }
+
+        protected override List<InterfazCrud> ConstruirListado(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override InterfazCrud ConstruirObjeto(SqlDataReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Eliminar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        protected override string Insertar(ref SqlCommand cmd)
+        {
+            #region Insertar
+            cmd.CommandText = "proClientesInsertar";
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter IdentityParam = new SqlParameter("@IdCliente", SqlDbType.Int);            
+            IdentityParam.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(IdentityParam);
+            cmd.Parameters.AddWithValue("@TipoIdentificacion", Cliente.TipoIdentificacion);
+            cmd.Parameters.AddWithValue("@NumeroIdentificacion", Cliente.NumeroIdentificacion);
+            cmd.Parameters.AddWithValue("@PrimerNombre", Cliente.PrimerNombre);
+            cmd.Parameters.AddWithValue("@SegundoNombre", Cliente.SegundoNombre);
+            cmd.Parameters.AddWithValue("@PrimerApellido", Cliente.PrimerApellido);
+            cmd.Parameters.AddWithValue("@SegundoApellido", Cliente.SegundoApellido);
+            cmd.Parameters.AddWithValue("@RazonSocial", Cliente.RazonSocial);
+            cmd.Parameters.AddWithValue("@IdEstrato", 0/*Cliente.Estrato.IdEstrato*/);
+            #endregion
+
+            return "@IdCliente";
+        }
+
+        protected override void Modificar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override object SeleccionarId(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarTodos(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

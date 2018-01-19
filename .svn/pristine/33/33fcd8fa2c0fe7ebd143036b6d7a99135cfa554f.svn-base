@@ -1,0 +1,78 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ean.edu.desarollo.objetos;
+
+namespace ean.edu.desarrollo.persistencia
+{
+    public class ClienteDB : Interfaces.AbstractCrud, Interfaces.InterfazCrud
+    {
+        private Cliente _Cliente;
+
+        #region Constructor
+        public ClienteDB(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+
+        #endregion
+        #region Propiedades
+        public Cliente Cliente
+        {
+            get
+            {
+                return _Cliente;
+            }
+
+            set
+            {
+                _Cliente = value;
+            }
+        } 
+        #endregion
+
+        public bool Eliminar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Insertar()
+        {
+            bool resultado = false;
+            SqlCommand cmd = base.Connection.CreateCommand();
+            cmd.Transaction = base.Transaction;
+
+            #region Insertar
+            cmd.CommandText = "insertarCliente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@TipoIdentificacion", Cliente.TipoIdentificacion);
+            cmd.Parameters.AddWithValue("@NumeroIdentificacion", Cliente.NumeroIdentificacion);
+            cmd.Parameters.AddWithValue("@PrimerNombre", Cliente.PrimerNombre);
+            cmd.Parameters.AddWithValue("@SegundoNombre", Cliente.SegundoNombre);
+            cmd.Parameters.AddWithValue("@PrimerApellido", Cliente.PrimerApellido);
+            cmd.Parameters.AddWithValue("@SegundoApellido", Cliente.SegundoApellido);
+            cmd.Parameters.AddWithValue("@RazonSocial", Cliente.RazonSocial);
+            cmd.Parameters.AddWithValue("@IdEstrato", Cliente.Estrato.IdEstrato);
+            #endregion
+
+            resultado = cmd.ExecuteNonQuery() != 0;
+            return resultado;
+        }
+
+        public bool Modificar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SeleccionarId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SeleccionarTodos()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

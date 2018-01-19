@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using ean.edu.desarollo.objetos;
+using ean.edu.desarrollo.logica;
+
+namespace ean.edu.desarrollo.web
+{
+    public partial class RegistrarCliente : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_registrar_Click(object sender, EventArgs e)
+        {
+
+            try {
+
+                Cliente clienteA = new Cliente();
+                clienteA.TipoIdentificacion = tipoIde.Value;
+                clienteA.NumeroIdentificacion = txt_numeroide.Text;
+                clienteA.PrimerNombre = txt_pnombre.Text;
+                clienteA.SegundoNombre = txt_snombre.Text;
+                clienteA.PrimerApellido = txt_papellido.Text;
+                clienteA.SegundoApellido = txt_sapellido.Text;
+                clienteA.RazonSocial = txt_razonsocial.Text;
+
+                FactureandoBL factureandoBL = new FactureandoBL();
+                factureandoBL.InsertarCliente(ref clienteA);
+                litNotificaciones.Text = "<script>alertarTexto('Registro del cliente exitoso','1')</script>";
+            }
+            catch (Exception ex) {
+                litNotificaciones.Text = "<script>alertarTexto('"+ ex.Message + "','2')</script>";
+            }
+
+        }
+    }
+}

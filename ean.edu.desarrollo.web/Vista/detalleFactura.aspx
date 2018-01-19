@@ -1,0 +1,148 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="detalleFactura.aspx.cs" Inherits="ean.edu.desarrollo.web.controladores.detalleFactura" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/normalize/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="Resources/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="Resources/css/index.css" />
+    <title>Detalle de factura</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="detallefactura">
+            <div class="row cabecera">
+                <div class="col-md-9">
+                    <figure>
+                        <img src="resources/images/logo.png" alt="logo" />
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="titlefacturaventa">
+                        Factura de venta
+                    </h3>
+                </div>
+            </div>
+            <hr />
+            <div class="row titledetalle">
+                <div class="col-md-7 datoscliente">
+                    <div class="row">
+                        <div class="col-md-4 nanne">Nombre/Razón social:</div>
+                        <div class="col-md-8">
+                            <asp:Literal runat="server" ID="lit_razonsocial"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 nanne">Número ID:</div>
+                        <div class="col-md-8">
+                            <asp:Literal runat="server" ID="lit_id"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 nanne">Estrato social:</div>
+                        <div class="col-md-8">
+                            <asp:Literal runat="server" ID="lit_estrato"></asp:Literal>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 numerofacturayfecha">
+                    <div class="row">
+                        <div class="col-md-6 nanne">Fecha de registro:</div>
+                        <div class="col-md-6">
+                            <asp:Literal runat="server" ID="lit_fecha"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 nanne">Número consecutivo:</div>
+                        <div class="col-md-6">
+                            <asp:Literal runat="server" ID="lit_consecutivo"></asp:Literal>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 nanne">Por concepto de:</div>
+                        <div class="col-md-6">Servicios telefonía, internet y televisión</div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row headeryfooterfactura">
+                <div class="col-md-2">Cargo básico: </div>
+                <div class="col-md-10">
+                    <asp:Literal runat="server" ID="lit_cargobasico"></asp:Literal>
+                </div>
+            </div>
+            <div class="row headeryfooterfactura">
+                <div class="col-md-2">Valor Base Estrato: </div>
+                <div class="col-md-10">
+                    <asp:Literal runat="server" ID="lit_valorbaseestrato"></asp:Literal>
+                </div>
+            </div>
+            <hr />
+
+            <table class="table table-striped">
+                <thead>
+                    <tr class="primerafila">
+                        <th>Servicio</th>
+                        <th>Cantidad</th>
+                        <th>Valor</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Televisión</td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_cantidadtelevision"></asp:Literal></td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_valortelevision"></asp:Literal></td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_subtotaltelevision"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <td>Internet</td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_cantidadinternet"></asp:Literal></td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_valorinternet"></asp:Literal></td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_subtotalinternet"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <td>Telefonía</td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_cantidadtelefonia"></asp:Literal></td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_valortelefonia"></asp:Literal></td>
+                        <td>
+                            <asp:Literal runat="server" ID="lit_subtotaltelefonia"></asp:Literal></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <div class="row headeryfooterfactura">
+                <div class="col-md-10">Subtotal: </div>
+                <div class="col-md-2">
+                    <asp:Literal runat="server" ID="lit_subtotal"></asp:Literal>
+                </div>
+            </div>
+            <div class="row headeryfooterfactura">
+                <div class="col-md-10">Cargo variable: </div>
+                <div class="col-md-2">
+                    <asp:Literal runat="server" ID="lit_cargovariable"></asp:Literal>
+                </div>
+            </div>
+            <div class="row headeryfooterfactura totales">
+                <div class="col-md-10">Total: </div>
+                <div class="col-md-2">
+                    <asp:Literal runat="server" ID="lit_total"></asp:Literal>
+                </div>
+            </div>
+        </div>
+        <asp:Literal ID="litNotificaciones" runat="server"></asp:Literal>
+    </form>
+</body>
+</html>

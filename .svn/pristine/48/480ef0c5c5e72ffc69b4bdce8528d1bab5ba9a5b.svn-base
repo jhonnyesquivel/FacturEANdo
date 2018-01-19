@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.persistencia.Interfaces
+{
+    public abstract class AbstractCrud : InterfazCrud
+    {
+
+        #region Atributos
+        private SqlTransaction _Transaction;
+        private SqlConnection _connection; 
+        #endregion
+
+        public AbstractCrud(SqlConnection pConnection, SqlTransaction pTransaction)
+        {
+            _Transaction = pTransaction;
+            _connection = pConnection;
+        }
+
+        #region Propiedades
+        public SqlTransaction Transaction
+        {
+            get
+            {
+                return _Transaction;
+            }
+
+            set
+            {
+                _Transaction = value;
+            }
+        }
+
+        public SqlConnection Connection
+        {
+            get
+            {
+                return _connection;
+            }
+
+            set
+            {
+                _connection = value;
+            }
+        } 
+        #endregion
+
+
+        public bool Insertar()
+        {
+            bool resultado = false;
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            Insertar(ref cmd);
+            resultado = cmd.ExecuteNonQuery() != 0;
+            return resultado;
+        }
+
+        public bool Modificar()
+        {
+            bool resultado = false;
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            Modificar(ref cmd);
+            resultado = cmd.ExecuteNonQuery() != 0;
+            return resultado;
+        }
+
+        public InterfazCrud SeleccionarTodos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public InterfazCrud SeleccionarId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Eliminar()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected abstract void Insertar(ref SqlCommand cmd);
+        protected abstract void Modificar(ref SqlCommand cmd);
+        protected abstract InterfazCrud SeleccionarTodos(ref SqlCommand cmd);
+        protected abstract InterfazCrud SeleccionarId(ref SqlCommand cmd);
+        protected abstract void Eliminar(ref SqlCommand cmd);
+    }
+}

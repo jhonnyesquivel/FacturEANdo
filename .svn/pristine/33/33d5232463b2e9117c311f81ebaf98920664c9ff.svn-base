@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.persistencia
+{
+    public class FacturaDB : Interfaces.AbstractCrud, Interfaces.InterfazCrud
+    {
+        
+        #region Constructor
+        public FacturaDB(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+
+        #endregion
+
+        public bool Eliminar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Insertar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Modificar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SeleccionarId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SeleccionarTodos()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

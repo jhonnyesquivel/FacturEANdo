@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11EC1D7A-4785-46D9-8B94-DEDFC89DFE1A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ean.edu.desarrollo.web</RootNamespace>
+    <AssemblyName>ean.edu.desarrollo.web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Vista\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\detalleFactura.aspx.cs">
+      <DependentUpon>detalleFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\detalleFactura.aspx.designer.cs">
+      <DependentUpon>detalleFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FacturaDeVenta.aspx.cs">
+      <DependentUpon>FacturaDeVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\FacturaDeVenta.aspx.designer.cs">
+      <DependentUpon>FacturaDeVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\RegistrarCliente.aspx.cs">
+      <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarCliente.aspx.designer.cs">
+      <DependentUpon>RegistrarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\RegistrarEstrato.aspx.cs">
+      <DependentUpon>RegistrarEstrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarEstrato.aspx.designer.cs">
+      <DependentUpon>RegistrarEstrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\verClientesRegistrados.aspx.cs">
+      <DependentUpon>verClientesRegistrados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\verClientesRegistrados.aspx.designer.cs">
+      <DependentUpon>verClientesRegistrados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\verFacturasRegistradas.aspx.cs">
+      <DependentUpon>verFacturasRegistradas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista\verFacturasRegistradas.aspx.designer.cs">
+      <DependentUpon>verFacturasRegistradas.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Default.aspx" />
+    <Content Include="Vista\detalleFactura.aspx" />
+    <Content Include="Vista\FacturaDeVenta.aspx" />
+    <Content Include="Vista\Global.asax" />
+    <Content Include="Vista\RegistrarCliente.aspx" />
+    <Content Include="Vista\RegistrarEstrato.aspx" />
+    <Content Include="Vista\Resources\.DS_Store" />
+    <Content Include="Vista\Resources\alertifyjs.org\css\alertify.css" />
+    <Content Include="Vista\Resources\alertifyjs.org\js\alertify.js" />
+    <Content Include="Vista\Resources\css\index.css" />
+    <Content Include="Vista\Resources\fancybox\blank.gif" />
+    <Content Include="Vista\Resources\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Vista\Resources\fancybox\fancybox_loading.gif" />
+    <Content Include="Vista\Resources\fancybox\fancybox_overlay.png" />
+    <Content Include="Vista\Resources\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Vista\Resources\fancybox\fancybox_sprite.png" />
+    <Content Include="Vista\Resources\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Vista\Resources\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Vista\Resources\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Vista\Resources\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Vista\Resources\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Vista\Resources\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Vista\Resources\fancybox\jquery.fancybox.css" />
+    <Content Include="Vista\Resources\fancybox\jquery.fancybox.js" />
+    <Content Include="Vista\Resources\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="Vista\Resources\favicons.ico\android-icon-144x144.png" />
+    <Content Include="Vista\Resources\favicons.ico\android-icon-192x192.png" />
+    <Content Include="Vista\Resources\favicons.ico\android-icon-36x36.png" />
+    <Content Include="Vista\Resources\favicons.ico\android-icon-48x48.png" />
+    <Content Include="Vista\Resources\favicons.ico\android-icon-72x72.png" />
+    <Content Include="Vista\Resources\favicons.ico\android-icon-96x96.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-114x114.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-120x120.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-144x144.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-152x152.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-180x180.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-57x57.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-60x60.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-72x72.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-76x76.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon-precomposed.png" />
+    <Content Include="Vista\Resources\favicons.ico\apple-icon.png" />
+    <Content Include="Vista\Resources\favicons.ico\browserconfig.xml" />
+    <Content Include="Vista\Resources\favicons.ico\favicon-16x16.png" />
+    <Content Include="Vista\Resources\favicons.ico\favicon-32x32.png" />
+    <Content Include="Vista\Resources\favicons.ico\favicon-96x96.png" />
+    <Content Include="Vista\Resources\favicons.ico\favicon.ico" />
+    <Content Include="Vista\Resources\favicons.ico\ms-icon-144x144.png" />
+    <Content Include="Vista\Resources\favicons.ico\ms-icon-150x150.png" />
+    <Content Include="Vista\Resources\favicons.ico\ms-icon-310x310.png" />
+    <Content Include="Vista\Resources\favicons.ico\ms-icon-70x70.png" />
+    <Content Include="Vista\Resources\images\bg.jpg" />
+    <Content Include="Vista\Resources\images\logo.png" />
+    <Content Include="Vista\Resources\js\index.js" />
+    <Content Include="Vista\Resources\vendors\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Vista\Resources\vendors\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Vista\Resources\vendors\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Vista\Resources\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Vista\Resources\vendors\jquery\jquery-2.2.3.min.js" />
+    <Content Include="Vista\Resources\vendors\normalize\css\normalize.css" />
+    <Content Include="Vista\verClientesRegistrados.aspx" />
+    <Content Include="Vista\verFacturasRegistradas.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\css\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\favicons.ico\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\favicons.ico\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\images\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\bootstrap\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\bootstrap\css\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\bootstrap\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\css\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\font-awesome\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\jquery\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\normalize\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Resources\vendors\normalize\css\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vista\Master.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ean.edu.desarrollo.modelo.logica\ean.edu.desarrollo.modelo.logica.csproj">
+      <Project>{6ec8138e-0d1b-41bb-a708-689f6132b1fc}</Project>
+      <Name>ean.edu.desarrollo.modelo.logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ean.edu.desarrollo.modelo.pocso\ean.edu.desarrollo.modelo.pocso.csproj">
+      <Project>{2fa5a1f3-4506-46d2-afd5-91ad6bae93bc}</Project>
+      <Name>ean.edu.desarrollo.modelo.pocso</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Accessibility.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.XML.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63610</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63610/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

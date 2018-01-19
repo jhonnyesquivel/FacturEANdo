@@ -1,0 +1,60 @@
+﻿using ean.edu.desarollo.objetos;
+using ean.edu.desarrollo.logica.Interfaces;
+using ean.edu.desarrollo.persistencia;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ean.edu.desarrollo.logica
+{
+    public class Consultas : AbstractLogica
+    {
+
+
+        public static object ConsultarTodos(string ClassName, object[] pParametros)
+        {
+            object resultado = null;
+
+            using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                SqlTransaction transaction;
+                transaction = connection.BeginTransaction();
+                command.Connection = connection;
+                command.Transaction = transaction;
+                try
+                {
+                    Type objTipo = Type.GetType("ean.edu.desarrollo.persistencia." + ClassName + ", ean.edu.desarrollo.persistencia");
+                    //tclass.GetMethod();
+                    if (objTipo != null)
+                    {
+                        object objDataInstance = null;
+                        if ((objDataInstance = Activator.CreateInstance(objTipo)) != null)
+                        {
+                            objTipo.GetProperty("Connection").SetValue(objDataInstance, connection, null);
+                            objTipo.GetProperty("Transaction").SetValue(objDataInstance, transaction, null);
+                            resultado = objTipo.InvokeMember("SeleccionarTodos", System.Reflection.BindingFlags.InvokeMethod, null, objDataInstance, pParametros);
+                            if (resultado == null)
+                                throw new Exception("Se presento un error realizando la consulta. Por favor contactar a tecnología para más información.");
+                        }
+                    }
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+                
+            }
+            return resultado;
+        }
+
+    }
+
+}

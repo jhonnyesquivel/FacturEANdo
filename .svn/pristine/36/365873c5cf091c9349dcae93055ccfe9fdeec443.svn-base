@@ -1,0 +1,18 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Master.master" AutoEventWireup="true" CodeBehind="RegistrarEstrato.aspx.cs" Inherits="ean.edu.desarrollo.web.RegistrarEstrato" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHeader" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    <div class="row">
+           <h3>
+               Agregar nuevo estrato:
+           </h3>
+        <div class="col-md-4">
+            <p>
+                Estrato:
+            </p>
+        </div>
+        <div class="col-md-8">
+            <input type="number" id="txt_estrato"/>
+        </div>
+    </div>
+</asp:Content>

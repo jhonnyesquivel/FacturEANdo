@@ -1,0 +1,134 @@
+﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using ean.edu.desarrollo.modelo.pocso;
+using ean.edu.desarrollo.persistencia.adonet.Interfaces;
+using System.Collections.Generic;
+
+
+namespace ean.edu.desarrollo.persistencia.adonet
+{
+    public class ManejadorFactura : AbstractCrud
+    {
+
+
+        #region Constructor
+        public ManejadorFactura(SqlConnection pConnection, SqlTransaction pTransaction) : base(pConnection, pTransaction)
+        {
+
+        }
+        #endregion
+        #region propiedades
+
+        private Factura _Factura;
+
+        public Factura Factura
+        {
+            get
+            {
+                return _Factura;
+            }
+
+            set
+            {
+                _Factura = value;
+            }
+        }
+
+        #endregion
+
+        public ManejadorFactura()
+        {
+
+        }
+
+        protected override string Insertar(ref SqlCommand cmd)
+        {
+
+            #region Insertar
+            cmd.CommandText = "proFacturasInsertar";
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter IdentityParam = new SqlParameter("@IdFactura", SqlDbType.Int);
+            IdentityParam.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(IdentityParam);
+            cmd.Parameters.AddWithValue("@IdCliente", Factura.Cliente.IdCliente);
+            cmd.Parameters.AddWithValue("@Fecha", Factura.Fecha);
+            #endregion
+
+            return "@IdFactura";
+
+        }
+
+        protected override void Modificar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void Eliminar(ref SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void SeleccionarTodos(ref SqlCommand cmd)
+        {
+            cmd.CommandText = "proFacturasSeleccionarTodos";
+            cmd.CommandType = CommandType.StoredProcedure;
+        }
+
+        /// <summary>
+        /// Selecciona todas las facturas de un año en curso
+        /// </summary>
+        /// <returns></returns>
+        public object SeleccionarPorMes(int pMes)
+        {
+            SqlCommand cmd = Connection.CreateCommand();
+            cmd.Transaction = Transaction;
+            cmd.CommandText = "proFacturassSeleccionarPorMes";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Mes", (int)pMes);
+            SqlDataReader dr = cmd.ExecuteReader();
+            return ConstruirListado(dr);
+        }
+
+        protected override void SeleccionarId(ref SqlCommand cmd, object id)
+        {
+            cmd.CommandText = "proFacturasSeleccionarId";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdFactura", (int)id);
+        }
+
+        protected override object ConstruirListado(SqlDataReader reader)
+        {
+            List<Factura> lisFactura = new List<Factura>();
+            while (reader.Read())
+            {
+                Factura item = new Factura();
+                item.IdFactura = int.Parse(reader["IdFactura"].ToString());
+                item.Consecutivo = reader["Consecutivo"].ToString();
+                item.Cliente = (Cliente)new ManejadorCliente(Connection, Transaction).SeleccionarId(int.Parse(reader["IdCliente"].ToString()));
+                item.Fecha = DateTime.Parse(reader["Fecha"].ToString());               
+
+
+                lisFactura.Add(item);
+            }
+            reader.Close();
+            return lisFactura;
+        }
+
+        protected override object ConstruirObjeto(SqlDataReader reader)
+        {
+            Factura item = new Factura();
+            while (reader.Read())
+            {
+                item.IdFactura = int.Parse(reader["IdFactura"].ToString());
+                item.Cliente = (Cliente)(new ManejadorCliente(this.Connection, this.Transaction).SeleccionarId(int.Parse(reader["IdCliente"].ToString())));
+                item.Consecutivo = reader["Consecutivo"].ToString();
+                item.Fecha = DateTime.Parse(reader["Fecha"].ToString());
+                item.DetalleFactura = (List<DetalleFactura>)(new ManejadorDetalleFactura(this.Connection, this.Transaction).SeleccionarDetalleFactura(item.IdFactura));
+            }
+            reader.Close();
+            return item;
+        }
+    }
+}

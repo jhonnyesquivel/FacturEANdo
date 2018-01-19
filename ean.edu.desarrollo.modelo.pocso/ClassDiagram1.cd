@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ean.edu.desarrollo.modelo.pocso.Cliente">
+    <Position X="2.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIgAAAAAAQAAJAQAgAAAoAABQAEAAAAgBAAAhAEAQAI=</HashCode>
+      <FileName>Cliente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Estrato" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_Facturas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ean.edu.desarrollo.modelo.pocso.DetalleFactura">
+    <Position X="5.75" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACEIAAgAIAAAAAgAAAAAAAAAgAAAACAAgAAQAAAAA=</HashCode>
+      <FileName>DetalleFactura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Factura" />
+      <Field Name="_Servicio" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ean.edu.desarrollo.modelo.pocso.Estrato">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAAAAEQAAABAAAAAAAIgiAAAQAAAAAAA=</HashCode>
+      <FileName>Estrato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ean.edu.desarrollo.modelo.pocso.Factura">
+    <Position X="2.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAQEAAACAAACQAAwAAAEEAAAAAAAAAAA=</HashCode>
+      <FileName>Factura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_DetalleFactura" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ean.edu.desarrollo.modelo.pocso.Servicio">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ghAAQAAAABACAEAAAAAAAAABAAAAAAAEEAAAAAAAAAA=</HashCode>
+      <FileName>Servicio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_TarifaServicio" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ean.edu.desarrollo.modelo.pocso.TarifaServicio">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAAAAAIQwCAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TarifaServicio.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Unidad" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ean.edu.desarrollo.modelo.pocso.UnidadTarifa">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAA=</HashCode>
+      <FileName>UnidadTarifa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
